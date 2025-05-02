@@ -1,5 +1,3 @@
-# Uchaguzi Online
-
 ![home2](https://user-images.githubusercontent.com/78599959/236873128-fe0819ef-7da8-41d7-842f-052f53b8c7f6.png)
 
 

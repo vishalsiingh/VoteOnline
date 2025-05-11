@@ -1,5 +1,5 @@
 	{% load static %}
-    <title>Uchaguzi Online | {% block title %}{% endblock %}</title>
+    <title>Vishal Online | {% block title %}{% endblock %}</title>
 	<link href="{% static 'img/voters/ballot.png' %}" rel="icon">
 	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
 	<link href="https://fonts.gstatic.com" rel="preconnect">
@@ -12,11 +12,11 @@
 		<div class="d-flex align-items-center justify-content-between">
 			{% if user.is_authenticated %}
 			<a href="{% url 'official_homepage' %}" class="logo d-flex align-items-center">
-				<span class="d-none d-lg-block">Uchaguzi Online</span>
+				<span class="d-none d-lg-block">Vishal Online</span>
 			</a>
 			<i class="bi bi-list toggle-sidebar-btn"></i>{% else %}
 			<a href="{% url 'user_login' %}" class="logo d-flex align-items-center">
-				<span class="d-none d-lg-block">Uchaguzi Online</span>
+				<span class="d-none d-lg-block">Vishal Online</span>
 			</a>
 			{% endif %}
 		</div>
@@ -123,7 +123,7 @@
 						<a href="#">
 							<img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
 							<div>
-							<h4>Maria Hudson</h4>
+							<h4>Cherry</h4>
 							<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
 							<p>4 hrs. ago</p>
 							</div>
@@ -137,7 +137,7 @@
 						<a href="#">
 							<img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
 							<div>
-							<h4>Anna Nelson</h4>
+							<h4>Chocolate</h4>
 							<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
 							<p>6 hrs. ago</p>
 							</div>
@@ -151,7 +151,7 @@
 						<a href="#">
 							<img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
 							<div>
-							<h4>David Muldon</h4>
+							<h4>Chotkuu</h4>
 							<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
 							<p>8 hrs. ago</p>
 							</div>
@@ -224,7 +224,8 @@
 		</nav>
 		{% endif %}
     </header>
-
+<!-- 🔽 THIS is where the child templates will inject their content -->
+    {% block content %}{% endblock %}
 	{% if user.is_authenticated %}
     <aside id="sidebar" class="sidebar">
 		<ul class="sidebar-nav" id="sidebar-nav">
@@ -276,13 +277,13 @@
     {% if user.is_authenticated %}
     <footer id="footer" class="footer">
         <div class="copyright">
-            <strong>&copy; 2022<span> Uchaguzi Online</span> | ALL RIGHTS RESERVED.</strong>
+            <strong>&copy; 2025<span> Vishal Online</span> | ALL RIGHTS RESERVED.</strong>
         </div>
     </footer>
 	{% else %}
 	<footer class="footer">
         <div class="copyright">
-            <strong>&copy; 2022<span> Uchaguzi Online</span> | ALL RIGHTS RESERVED.</strong>
+            <strong>&copy; 2025<span> Vishal Online</span> | ALL RIGHTS RESERVED.</strong>
         </div>
     </footer>
 	{% endif %}

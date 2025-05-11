@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .forms import (
     VoterRegistrationForm, EditProfileForm, ElectoralPostApplicationForm, UploadNominationForm,
@@ -11,7 +12,25 @@ from .utils import plot_graph
 from datetime import datetime
 
 
+def profile_view(request):
+    user = request.user
 
+    if user.groups.filter(name='Voters').exists():
+        return render(request, 'voters/profile.html')
+    elif user.groups.filter(name='Officials').exists():
+        return render(request, 'officials/profile.html')
+    else:
+        # fallback template or error
+        return render(request, 'base.html', {'message': 'Unknown user type'})
+
+def custom_logout(request):
+    logout(request)
+    return redirect('login') 
+# def profile_view(request):
+    # return render(request, 'users/users-profile.html')
+
+# def homepage(request):
+#     return render(request, 'homepage.html')
 def indexpage_view(request):
     nominated_aspirants_sch = Aspirants.objects.filter(nominate=True).all().order_by('post')
     if request.user.is_authenticated:

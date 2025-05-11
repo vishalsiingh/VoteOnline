@@ -15,6 +15,7 @@ class VoterRegistrationForm(forms.ModelForm):
         (None, '-- Select your school --'),
         ('School of Arts, Social Sciences and Business', 'School of Arts, Social Sciences and Business (SASSB)'),
         ('School of Education', 'School of Education (SE)'),
+        ('School of Computer  Science Engineering','School of Computer  Science Engineering(CSE)'),
         ('School of Information, Communication & Media Studies', 'School of Information, Communication & Media Studies (INFOCOMS)'),
         ('School of Science, Agriculture & Environmental Science', 'School of Science, Agriculture & Environmental Science (SSAES)'),
     )
@@ -28,7 +29,8 @@ class VoterRegistrationForm(forms.ModelForm):
     SELECT_SEMESTER = (
         (None, '-- Select semester --'),
         ('1', '1'),
-        ('2', '2')
+        ('2', '2'),
+        ('3','3')
     )
     gender = forms.ChoiceField(widget=forms.Select(attrs={'type': 'select', 'class': 'mb-2'}), label='', choices=SELECT_GENDER)
     phone_no = forms.CharField(widget=forms.TextInput(attrs={'type': 'tel', 'class': 'mt-2 mb-2', 'placeholder': 'Enter your mobile no.'}), label='', )
@@ -52,6 +54,7 @@ class EditProfileForm(forms.ModelForm):
         (None, '-- Select your school --'),
         ('School of Arts, Social Sciences and Business', 'School of Arts, Social Sciences and Business (SASSB)'),
         ('School of Education', 'School of Education (SE)'),
+         ('School of Computer  Science Engineering','School of Computer  Science Engineering(CSE)'),
         ('School of Information, Communication & Media Studies', 'School of Information, Communication & Media Studies (INFOCOMS)'),
         ('School of Science, Agriculture & Environmental Science', 'School of Science, Agriculture & Environmental Science (SSAES)'),
     )
@@ -66,6 +69,7 @@ class EditProfileForm(forms.ModelForm):
         (None, '-- Select semester --'),
         ('1', '1'),
         ('2', '2'),
+        ('3','3')
     )
     gender = forms.ChoiceField(widget=forms.Select(attrs={'type': 'select', 'class': 'mb-2'}), choices=SELECT_GENDER, disabled=True)
     phone_no = forms.CharField(widget=forms.TextInput(attrs={'type': 'tel', 'class': ' mb-2'}), disabled=True)
@@ -140,6 +144,7 @@ class UpdateOfficialProfileForm(forms.ModelForm):
         (None, '-- Select your school --'),
         ('School of Arts, Social Sciences and Business', 'School of Arts, Social Sciences and Business (SASSB)'),
         ('School of Education', 'School of Education (SE)'),
+         ('School of Computer  Science Engineering','School of Computer  Science Engineering(CSE)'),
         ('School of Information, Communication & Media Studies', 'School of Information, Communication & Media Studies (INFOCOMS)'),
         ('School of Science, Agriculture & Environmental Science', 'School of Science, Agriculture & Environmental Science (SSAES)'),
     )
@@ -172,6 +177,7 @@ class EditOfficialProfileForm(forms.ModelForm):
         (None, '-- Select your school --'),
         ('School of Arts, Social Sciences and Business', 'School of Arts, Social Sciences and Business (SASSB)'),
         ('School of Education', 'School of Education (SE)'),
+         ('School of Computer  Science Engineering','School of Computer  Science Engineering(CSE)'),
         ('School of Information, Communication & Media Studies', 'School of Information, Communication & Media Studies (INFOCOMS)'),
         ('School of Science, Agriculture & Environmental Science', 'School of Science, Agriculture & Environmental Science (SSAES)'),
     )

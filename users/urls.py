@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.contrib.auth import views as auth_views
+from users import views  # Import views from the 'users' app (assuming views.py is in the 'users' folder)
+from .views import profile_view
 
 urlpatterns = [
     path('', views.indexpage_view, name='landing_page'),
@@ -11,7 +14,10 @@ urlpatterns = [
     path('polling/<str:pk>/school/polls/<str:school>/', views.polling_view, name='poll'),
     path('poll-results/', views.results_view, name='poll_results'),
     path('election-results/', views.election_results_view, name='election_results'),
-
+path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout_user'),
+ path('logout/', views.custom_logout, name='logout_user'),
+ path('users-profile/', views.profile_view, name='profile_page'),
+path('users-profile/', profile_view, name='profile_page'),
     path('official-profile/', views.officials_profile_view, name='official_profile'),
     path('homepage/', views.officials_homepage, name='official_homepage'),
     path('nomination/', views.nominate_aspirants_view, name='nominate_aspirants'),

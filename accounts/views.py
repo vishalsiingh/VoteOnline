@@ -3,6 +3,7 @@ from django.contrib.auth.models import auth
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib import messages
+from django.contrib.auth import authenticate, login
 from .forms import LoginForm, SignupForm
 from .models import Voters, Officials
 

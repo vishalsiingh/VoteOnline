@@ -1,5 +1,5 @@
 {% load static %}
-<title>Uchaguzi Online | {% block title %}{% endblock %}</title>
+<title>Vishal Online | {% block title %}{% endblock %}</title>
 <link href="{% static 'img/voters/ballot.png' %}" rel="icon">
 <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -12,11 +12,11 @@
     <div class="d-flex align-items-center justify-content-between">
         {% if user.is_authenticated %}
         <a href="{% url 'voters_homepage' %}" class="logo d-flex align-items-center">
-            <span class="d-none d-lg-block">Uchaguzi Online</span>
+            <span class="d-none d-lg-block">Vishal Online</span>
         </a>
         <i class="bi bi-list toggle-sidebar-btn"></i>{% else %}
         <a href="{% url 'user_login' %}" class="logo d-flex align-items-center">
-            <span class="d-none d-lg-block">Uchaguzi Online</span>
+            <span class="d-none d-lg-block">Vishal Online</span>
         </a>
         {% endif %}
     </div>
@@ -302,13 +302,13 @@
 {% if user.is_authenticated %}
 <footer id="footer" class="footer">
     <div class="copyright">
-        <strong>&copy; 2022<span> Uchaguzi Online</span> | ALL RIGHTS RESERVED.</strong>
+        <strong>&copy; 2025<span> Vishal Online</span> | ALL RIGHTS RESERVED.</strong>
     </div>
 </footer>
 {% else %}
 <footer class="footer">
     <div class="copyright">
-        <strong>&copy; 2022<span> Uchaguzi Online</span> | ALL RIGHTS RESERVED.</strong>
+        <strong>&copy; 2025<span> Vishal Online</span> | ALL RIGHTS RESERVED.</strong>
     </div>
 </footer>
 {% endif %}

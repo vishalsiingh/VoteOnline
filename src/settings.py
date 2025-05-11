@@ -3,6 +3,7 @@ from pathlib import Path
 import environ
 import os
 
+ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME', 'localhost')]
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,6 +23,8 @@ DEBUG = env.bool('DEBUG', default=True)  # Read DEBUG from .env (default True fo
 # Add allowed hosts here (you can add multiple)
 # ALLOWED_HOSTS = [env('WEB_DOMAIN', default='127.0.0.1')]  # Default to localhost if not set in .env
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['voteonline-f96v.onrender.com']
+
 
 # Application definition
 INSTALLED_APPS = [

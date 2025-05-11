@@ -1,8 +1,10 @@
-<img src="https://user-images.githubusercontent.com/78599959/236873128-fe0819ef-7da8-41d7-842f-052f53b8c7f6.png" width="100%">
 
+
+![WhatsApp Image 2025-05-11 at 22 30 45_ef2f7f17](https://github.com/user-attachments/assets/ca8b3a06-4b39-441f-82f7-e9c8b66c1b2b)
+![WhatsApp Image 2025-05-11 at 22 32 22_346570a7](https://github.com/user-attachments/assets/afa7c012-9a95-41cb-ae5b-53544ea71afe)
 
 ## Overview
-Uchaguzi online is an online voting website that serves a tertiary institution, in this case, Rongo University. *Uchaguzi* is a Swahili word for "elections" while *online* emphasizes the need to have have internet connection to access the website. 
+Vishal online is an online voting website that serves a tertiary institution, in this case, KIIT University. 
 
 The website is used by the following people:
 
@@ -71,7 +73,7 @@ If you wish to be make contributions, follow the instructions stated below.
 
 
 ## Users instructions
-You can access the website on this [link](https://uchaguzi-online.onrender.com/users) and create an account.
+You can access the website on this [link](https://voteonline-f96v.onrender.com) and create an account.
 
 
 
